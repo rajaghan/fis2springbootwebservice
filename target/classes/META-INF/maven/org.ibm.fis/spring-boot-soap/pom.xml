@@ -167,7 +167,7 @@
         </executions>
       </plugin>-->
       
-     <plugin>
+       <plugin>
         <groupId>org.apache.cxf</groupId>
         <artifactId>cxf-codegen-plugin</artifactId>
         <version>2.7.0.redhat-611423</version>
@@ -179,11 +179,17 @@
               <sourceRoot>${basedir}/target/generated/src/main/java</sourceRoot>
               <wsdlOptions>
                 <wsdlOption>
-                  <wsdl>${basedir}/src/main/resources/META-INF/wsdl/HelloService.wsdl</wsdl>
+                 <wsdl>${basedir}/src/main/resources/META-INF/wsdl/HelloService.wsdl</wsdl>
+                  
                   <!--  <bindingFiles>
                     <bindingFile>${basedir}/src/main/resources/META-INF/wsdl/binding.xml
                     </bindingFile>
                   </bindingFiles>-->
+                </wsdlOption>
+                <wsdlOption>
+                
+                  <wsdl>${basedir}/src/main/resources/META-INF/wsdl/PersonService.wsdl</wsdl>
+                 
                 </wsdlOption>
               </wsdlOptions>
             </configuration>

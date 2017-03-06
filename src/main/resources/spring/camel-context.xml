@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:camel="http://camel.apache.org/schema/spring"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
-    <!-- Define a traditional camel context here -->
+    xmlns:cxf="http://camel.apache.org/schema/cxf"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd http://camel.apache.org/schema/cxf     http://camel.apache.org/schema/cxf/camel-cxf.xsd">
+    <!-- Exposing the service using Camel-CXF component -->
+    <cxf:cxfEndpoint address="/helloService" id="helloService" serviceClass="org.example.helloservice.HelloService">
+        <cxf:properties>
+            <entry key="dataFormat" value="POJO"/>
+            <entry key="faultStackTraceEnabled" value="true"/>
+            <entry key="loggingFeatureEnabled" value="false"/>
+        </cxf:properties>
+    </cxf:cxfEndpoint>
+    <cxf:cxfEndpoint address="/personService" id="personService" serviceClass="org.example.personservice.PersonService">
+        <cxf:properties>
+            <entry key="dataFormat" value="POJO"/>
+            <entry key="faultStackTraceEnabled" value="true"/>
+            <entry key="loggingFeatureEnabled" value="false"/>
+        </cxf:properties>
+    </cxf:cxfEndpoint>
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
         <!--  <route id="simple-route">
             <from id="route-timer" uri="timer:foo?period=2000"/>
