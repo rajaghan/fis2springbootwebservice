@@ -30,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link NewOperation }
-     * 
-     */
-    public NewOperation createNewOperation() {
-        return new NewOperation();
-    }
-
-    /**
      * Create an instance of {@link NewOperationResponse }
      * 
      */
     public NewOperationResponse createNewOperationResponse() {
         return new NewOperationResponse();
+    }
+
+    /**
+     * Create an instance of {@link NewOperation }
+     * 
+     */
+    public NewOperation createNewOperation() {
+        return new NewOperation();
     }
 
 }

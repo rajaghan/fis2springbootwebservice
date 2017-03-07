@@ -7,7 +7,7 @@
             <id>build.repos</id>
                 <repositories>
 
-                    <repository>
+                    <!--<repository>
                         <snapshots>
                         <enabled>false</enabled>
                         </snapshots>
@@ -20,8 +20,8 @@
                         <id>snapshots</id>
                         <name>redhat-all</name>
                         <url>http://nexus-cicd.rhel-cdk.10.1.2.2.xip.io/content/repositories/red-hat-all/</url>
-                    </repository>
-<!--
+                    </repository>-->
+
                     
                 <repository>
                     <id>spring.release</id>
@@ -95,11 +95,11 @@
                         <updatePolicy>never</updatePolicy>
                     </releases>
                 </repository>
-               -->
+               
             </repositories>
             <pluginRepositories>
 
-                <pluginRepository>
+               <!-- <pluginRepository>
                     <snapshots>
                     <enabled>false</enabled>
                     </snapshots>
@@ -113,8 +113,8 @@
                     <id>snapshots</id>
                     <name>redhat-all</name>
                     <url>http://nexus-cicd.rhel-cdk.10.1.2.2.xip.io/content/repositories/red-hat-all/</url>
-                </pluginRepository>
-<!--
+                </pluginRepository>-->
+
    
                 <pluginRepository>
                     <id>spring.release</id>
@@ -188,7 +188,7 @@
                         <updatePolicy>never</updatePolicy>
                     </releases>
                 </pluginRepository>
-  -->
+  
             </pluginRepositories>
         </profile>
     </profiles>
